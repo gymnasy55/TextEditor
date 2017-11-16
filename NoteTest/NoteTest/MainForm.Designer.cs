@@ -42,6 +42,8 @@
             this.wrapBox = new System.Windows.Forms.CheckBox();
             this.fontBox = new System.Windows.Forms.ComboBox();
             this.btnAddFont = new System.Windows.Forms.Button();
+            this.btnCreateFile = new System.Windows.Forms.Button();
+            this.boldBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numFont)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +91,7 @@
             this.fldContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.fldContent.Font = new System.Drawing.Font("Calibri", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fldContent.Location = new System.Drawing.Point(12, 79);
             this.fldContent.Multiline = true;
             this.fldContent.Name = "fldContent";
@@ -131,7 +134,7 @@
             // btnSaveFile
             // 
             this.btnSaveFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveFile.Location = new System.Drawing.Point(498, 578);
+            this.btnSaveFile.Location = new System.Drawing.Point(495, 578);
             this.btnSaveFile.Name = "btnSaveFile";
             this.btnSaveFile.Size = new System.Drawing.Size(75, 23);
             this.btnSaveFile.TabIndex = 8;
@@ -162,6 +165,7 @@
             // 
             // wrapBox
             // 
+            this.wrapBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.wrapBox.AutoSize = true;
             this.wrapBox.Location = new System.Drawing.Point(255, 56);
             this.wrapBox.Name = "wrapBox";
@@ -173,12 +177,15 @@
             // 
             // fontBox
             // 
+            this.fontBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fontBox.FormattingEnabled = true;
             this.fontBox.Items.AddRange(new object[] {
             "Calibri",
             "Times New Roman",
             "Arial",
-            "Courier New"});
+            "Courier New",
+            "Consolas"});
             this.fontBox.Location = new System.Drawing.Point(140, 53);
             this.fontBox.Name = "fontBox";
             this.fontBox.Size = new System.Drawing.Size(109, 21);
@@ -187,20 +194,45 @@
             // 
             // btnAddFont
             // 
-            this.btnAddFont.Enabled = false;
-            this.btnAddFont.Location = new System.Drawing.Point(331, 53);
+            this.btnAddFont.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddFont.Location = new System.Drawing.Point(417, 52);
             this.btnAddFont.Name = "btnAddFont";
-            this.btnAddFont.Size = new System.Drawing.Size(107, 23);
+            this.btnAddFont.Size = new System.Drawing.Size(72, 23);
             this.btnAddFont.TabIndex = 12;
             this.btnAddFont.Text = "Добавить шрифт";
             this.btnAddFont.UseVisualStyleBackColor = true;
             this.btnAddFont.Click += new System.EventHandler(this.btnAddFont_Click);
+            // 
+            // btnCreateFile
+            // 
+            this.btnCreateFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateFile.Location = new System.Drawing.Point(495, 52);
+            this.btnCreateFile.Name = "btnCreateFile";
+            this.btnCreateFile.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateFile.TabIndex = 13;
+            this.btnCreateFile.Text = "Создать";
+            this.btnCreateFile.UseVisualStyleBackColor = true;
+            this.btnCreateFile.Click += new System.EventHandler(this.btnCreateFile_Click);
+            // 
+            // boldBox
+            // 
+            this.boldBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.boldBox.AutoSize = true;
+            this.boldBox.Location = new System.Drawing.Point(332, 56);
+            this.boldBox.Name = "boldBox";
+            this.boldBox.Size = new System.Drawing.Size(69, 17);
+            this.boldBox.TabIndex = 14;
+            this.boldBox.Text = "Жирный";
+            this.boldBox.UseVisualStyleBackColor = true;
+            this.boldBox.CheckedChanged += new System.EventHandler(this.boldBox_CheckedChanged);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 626);
+            this.Controls.Add(this.boldBox);
+            this.Controls.Add(this.btnCreateFile);
             this.Controls.Add(this.btnAddFont);
             this.Controls.Add(this.fontBox);
             this.Controls.Add(this.wrapBox);
@@ -216,6 +248,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Простой блокнот";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numFont)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -240,6 +273,8 @@
         private System.Windows.Forms.CheckBox wrapBox;
         private System.Windows.Forms.ComboBox fontBox;
         private System.Windows.Forms.Button btnAddFont;
+        private System.Windows.Forms.Button btnCreateFile;
+        private System.Windows.Forms.CheckBox boldBox;
     }
 }
 

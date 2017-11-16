@@ -1,0 +1,11 @@
+E:\C#\NoteTest\NoteTest\bin\Debug\NoteTest.exe
+E:\C#\NoteTest\NoteTest\bin\Debug\NoteTest.pdb
+E:\C#\NoteTest\NoteTest\bin\Debug\TextEditor.BL.dll
+E:\C#\NoteTest\NoteTest\bin\Debug\TextEditor.BL.pdb
+E:\C#\NoteTest\NoteTest\obj\Debug\TextEditor.csprojResolveAssemblyReference.cache
+E:\C#\NoteTest\NoteTest\obj\Debug\NoteTest.AddFontForm.resources
+E:\C#\NoteTest\NoteTest\obj\Debug\NoteTest.MainForm.resources
+E:\C#\NoteTest\NoteTest\obj\Debug\NoteTest.Properties.Resources.resources
+E:\C#\NoteTest\NoteTest\obj\Debug\TextEditor.csproj.GenerateResource.Cache
+E:\C#\NoteTest\NoteTest\obj\Debug\NoteTest.exe
+E:\C#\NoteTest\NoteTest\obj\Debug\NoteTest.pdb
